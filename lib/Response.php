@@ -1,7 +1,7 @@
-<?php 
+<?php
 
-class Response{
-    static function handle(array $data){
-        echo json_encode($data);
-    }
+class Response {
+	static function handle($data) {
+		echo json_encode($data);
+	}
 }

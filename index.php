@@ -1,11 +1,21 @@
-<?php 
+<?php
 include 'lib/Request.php';
+include 'Database.php';
+include 'Repositories/User.php';
 
-Request::get('/index.php', function(){
-    return ['o0o0o'];
+Request::get('/', function () {
+    return ['index'];
 });
 
+Request::get('/user/([0-9]+)', function ($id) {
+    $user = new User();
+    var_dump(['user/' . $id]);
+});
 
-Request::post('/index.php', function(){
+Request::get('/index.php', function () {
+    return ['index.php'];
+});
+
+Request::post('/index.php', function () {
     return ['o0o0o'];
 });
